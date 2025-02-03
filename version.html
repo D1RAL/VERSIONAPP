@@ -1,21 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page Améliorée</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #2980b9;
+        }
+        h3 {
+            color: #27ae60;
+        }
+        h4 {
+            color: #e74c3c;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
     <h1>HELLO BIENVENUE</h1>
-    <!--PARTIE DE ASSALE IL DOIT AJOUTER UN H2-->
-    <!--PARTIE DE SANDE IL DOIT AJOUTER UN H2-->
-    <h2>mon papa s'appelle Sandé kouakou </h2>
-    <!--PARTIE DE YONATHAN IL DOIT AJOUTER UN H2-->
-    <h2>
-        J'ai bougé Hien
-    </h2>
 
-    <h3>ma go est jolie</h3>
-    <h4>helloooooo</h4>
+    <h2>Mon papa s'appelle Sandé Kouakou</h2>
+    <h2>J'ai bougé Hien</h2>
+
+    <h3>Ma go est jolie</h3>
+    <h4>Helloooooo</h4>
+
+    <button onclick="ajouterTitre()">Ajouter un H2</button>
+
+    <script>
+        function ajouterTitre() {
+            let nouveauH2 = document.createElement("h2");
+            let texte = prompt("Entrez le texte du nouveau titre H2 :");
+            if (texte) {
+                nouveauH2.textContent = texte;
+                document.body.appendChild(nouveauH2);
+            } else {
+                alert("Le texte ne peut pas être vide !");
+            }
+        }
+    </script>
 </body>
-</html> 
+</html>
